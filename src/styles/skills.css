@@ -1,0 +1,267 @@
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skills {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  padding: 125px 0 135px;
+
+  overflow: hidden;
+
+  background: #050b14;
+}
+
+/* =========================================================
+   SKILLS CONTENT
+   ========================================================= */
+
+.skills__content {
+  width: min(1250px, calc(100% - 56px));
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  will-change: opacity, transform;
+}
+
+/* =========================================================
+   SKILLS EYEBROW
+   ========================================================= */
+
+.skills__eyebrow {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #82b4ff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   SKILLS DESCRIPTION
+   ========================================================= */
+
+.skills__description {
+  max-width: 950px;
+
+  margin: 0 auto 44px;
+
+  color: rgba(222, 231, 243, 0.55);
+
+  font-size: 18px;
+  font-weight: 400;
+
+  line-height: 1.65;
+}
+
+/* =========================================================
+   SKILLS LIST
+   ========================================================= */
+
+.skills__list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SKILL ITEM
+   ========================================================= */
+
+.skills__item {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 25px;
+
+  border: 1px solid
+    rgba(126, 157, 201, 0.28);
+
+  border-radius: 13px;
+
+  color: rgba(244, 248, 253, 0.94);
+
+  background: rgba(255, 255, 255, 0.035);
+
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  box-shadow:
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.035);
+
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+/* =========================================================
+   SKILL HOVER
+   ========================================================= */
+
+.skills__item:hover {
+  color: #ffffff;
+
+  border-color:
+    rgba(111, 157, 255, 0.58);
+
+  background:
+    rgba(95, 143, 255, 0.1);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px
+      rgba(65, 110, 200, 0.16),
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.04);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .skills {
+    padding: 105px 0 115px;
+  }
+
+  .skills__content {
+    width: calc(100% - 44px);
+  }
+
+  .skills__eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 11px;
+  }
+
+  .skills__description {
+    max-width: 700px;
+
+    margin-bottom: 38px;
+
+    font-size: 16px;
+  }
+
+  .skills__list {
+    gap: 12px;
+  }
+
+  .skills__item {
+    padding: 14px 21px;
+
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .skills {
+    padding: 85px 0 95px;
+  }
+
+  .skills__content {
+    width: calc(100% - 32px);
+  }
+
+  .skills__eyebrow {
+    margin-bottom: 16px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.24em;
+  }
+
+  .skills__description {
+    max-width: 380px;
+
+    margin: 0 auto 30px;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+  .skills__list {
+    gap: 10px;
+  }
+
+  .skills__item {
+    padding: 12px 17px;
+
+    border-radius: 11px;
+
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .skills {
+    padding: 75px 0 85px;
+  }
+
+  .skills__content {
+    width: calc(100% - 26px);
+  }
+
+  .skills__description {
+    font-size: 13px;
+  }
+
+  .skills__list {
+    gap: 8px;
+  }
+
+  .skills__item {
+    padding: 11px 15px;
+
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .skills__item {
+    transition: none;
+  }
+}

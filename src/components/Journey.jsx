@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowDown, ArrowUpRight, Award } from "lucide-react";
+import { ArrowDown, Award } from "lucide-react";
 
 const journey = [
   {
@@ -175,12 +175,12 @@ function JourneyCard({ item, opacity }) {
           <div className="journey-card__actions">
             <a href="#projects">
               <span>Explore my work</span>
-              <ArrowUpRight size={17} strokeWidth={1.8} />
+              <span aria-hidden="true">↗</span>
             </a>
 
             <a href="#contact">
               <span>Let's connect</span>
-              <ArrowUpRight size={17} strokeWidth={1.8} />
+              <span aria-hidden="true">↗</span>
             </a>
           </div>
         )}
@@ -210,8 +210,9 @@ function Journey() {
   const cardRefs = useRef([]);
 
   const [introOpacity, setIntroOpacity] = useState(1);
+
   const [cardOpacities, setCardOpacities] = useState(() =>
-    journey.map(() => 1),
+    journey.map(() => 1)
   );
 
   useEffect(() => {
@@ -244,13 +245,17 @@ function Journey() {
 
         const rect = card.getBoundingClientRect();
 
-        const cardCenter = rect.top + rect.height / 2;
-        const viewportCenter = window.innerHeight / 2;
+        const cardCenter =
+          rect.top + rect.height / 2;
 
-        const fadeDistance = window.innerHeight * 0.55;
+        const viewportCenter =
+          window.innerHeight / 2;
+
+        const fadeDistance =
+          window.innerHeight * 0.55;
 
         const distanceFromCenter = Math.abs(
-          cardCenter - viewportCenter,
+          cardCenter - viewportCenter
         );
 
         let opacity =
@@ -266,15 +271,29 @@ function Journey() {
 
     updateJourneyFade();
 
-    window.addEventListener("scroll", updateJourneyFade, {
-      passive: true,
-    });
+    window.addEventListener(
+      "scroll",
+      updateJourneyFade,
+      {
+        passive: true,
+      }
+    );
 
-    window.addEventListener("resize", updateJourneyFade);
+    window.addEventListener(
+      "resize",
+      updateJourneyFade
+    );
 
     return () => {
-      window.removeEventListener("scroll", updateJourneyFade);
-      window.removeEventListener("resize", updateJourneyFade);
+      window.removeEventListener(
+        "scroll",
+        updateJourneyFade
+      );
+
+      window.removeEventListener(
+        "resize",
+        updateJourneyFade
+      );
     };
   }, []);
 
@@ -283,7 +302,9 @@ function Journey() {
       <div
         ref={introRef}
         className="journey__intro"
-        style={{ opacity: introOpacity }}
+        style={{
+          opacity: introOpacity,
+        }}
       >
         <span className="journey__eyebrow">
           THE JOURNEY
@@ -301,7 +322,11 @@ function Journey() {
         </p>
 
         <div className="journey__scroll">
-          <ArrowDown size={18} strokeWidth={1.7} />
+          <ArrowDown
+            size={18}
+            strokeWidth={1.7}
+          />
+
           <span>Follow the path</span>
         </div>
       </div>
@@ -322,23 +347,6 @@ function Journey() {
             />
           </div>
         ))}
-      </div>
-
-      <div className="journey__next">
-        <div>
-          <span>THE NEXT CHAPTER</span>
-
-          <h3>
-            Ready to turn
-            <br />
-            data into impact.
-          </h3>
-        </div>
-
-        <a href="#contact" aria-label="Let's connect">
-          <ArrowUpRight size={22} strokeWidth={1.8} />
-          <span>Let's connect</span>
-        </a>
       </div>
     </section>
   );
