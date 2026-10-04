@@ -1,14 +1,61 @@
-import { ArrowRight, Mail } from 'lucide-react'
+import { useEffect, useState } from "react";
+import { ArrowRight, Mail } from "lucide-react";
 
 function Hero() {
+  const [heroProgress, setHeroProgress] = useState(0);
+
+  useEffect(() => {
+    const updateHeroProgress = () => {
+      const heroHeight = window.innerHeight;
+
+      /*
+       * The Hero starts disappearing before the
+       * fixed navbar becomes visually dominant.
+       */
+      const fadeDistance = heroHeight * 0.55;
+
+      const progress = Math.min(
+        Math.max(window.scrollY / fadeDistance, 0),
+        1
+      );
+
+      setHeroProgress(progress);
+    };
+
+    updateHeroProgress();
+
+    window.addEventListener("scroll", updateHeroProgress, {
+      passive: true,
+    });
+
+    window.addEventListener("resize", updateHeroProgress);
+
+    return () => {
+      window.removeEventListener("scroll", updateHeroProgress);
+      window.removeEventListener("resize", updateHeroProgress);
+    };
+  }, []);
+
+  /*
+   * Hero content fades and moves slightly upward
+   * while the cinematic background stays fixed.
+   */
+  const opacity = 1 - heroProgress;
+
+  const translateY = heroProgress * -80;
+
   return (
     <section className="hero" id="home">
-      <div className="hero__background" aria-hidden="true" />
-
-      <div className="hero__overlay" aria-hidden="true" />
-
-      <div className="hero__content">
-        <p className="hero__eyebrow">AN INTERACTIVE CAREER STORY</p>
+      <div
+        className="hero__content"
+        style={{
+          opacity,
+          transform: `translateY(${translateY}px)`,
+        }}
+      >
+        <p className="hero__eyebrow">
+          AN INTERACTIVE CAREER STORY
+        </p>
 
         <h1 className="hero__title">
           Turning <span>data</span>
@@ -19,7 +66,7 @@ function Hero() {
         <p className="hero__description">
           From building applications to engineering data systems.
           <br />
-          Master&apos;s student in AI &amp; Data Science, passionate about{' '}
+          Master's student in AI &amp; Data Science, passionate about{" "}
           <br className="hero__desktop-break" />
           solving real-world problems with data, ML and scalable systems.
         </p>
@@ -61,11 +108,17 @@ function Hero() {
         </div>
       </div>
 
-      <div className="hero__timeline-marker" aria-hidden="true">
+      <div
+        className="hero__timeline-marker"
+        aria-hidden="true"
+        style={{
+          opacity: Math.max(0, 1 - heroProgress * 1.5),
+        }}
+      >
         <span />
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

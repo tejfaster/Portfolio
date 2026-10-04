@@ -1,0 +1,141 @@
+/* ========================================
+   FINAL SAFETY OVERRIDES
+   ======================================== */
+
+.navbar {
+
+  background: transparent !important;
+
+  backdrop-filter: none !important;
+
+  -webkit-backdrop-filter: none !important;
+
+}
+
+.navbar::after {
+
+  content: none !important;
+
+  display: none !important;
+
+}
+
+.journey__line {
+
+  display: none !important;
+
+}
+
+.journey__timeline {
+
+  position: relative !important;
+
+  top: auto !important;
+
+  right: auto !important;
+
+  bottom: auto !important;
+
+  left: auto !important;
+
+  margin-top: 0 !important;
+
+  min-height: 0 !important;
+
+  height: auto !important;
+
+  overflow: visible !important;
+
+  transform: none !important;
+
+}
+
+.journey__intro {
+
+  position: relative !important;
+
+  z-index: 10 !important;
+
+}
+
+.journey-card {
+
+  position: relative !important;
+
+  z-index: 2 !important;
+
+}
+
+.journey__chapter {
+
+  display: none !important;
+
+}
+
+.journey__timeline::before {
+
+  content: '';
+
+  position: absolute;
+
+  top: 44px !important;
+
+  bottom: 44px !important;
+
+  left: 50% !important;
+
+  width: 1px !important;
+
+  z-index: 0 !important;
+
+  transform: translateX(-50%) !important;
+
+  background:
+
+    linear-gradient(
+
+      to bottom,
+
+      rgba(117, 176, 255, 0) 0%,
+
+      rgba(55, 135, 255, 0.72) 8%,
+
+      rgba(55, 135, 255, 0.72) 92%,
+
+      rgba(117, 176, 255, 0) 100%
+
+    ) !important;
+
+  pointer-events: none;
+
+}
+
+@media (max-width: 700px) {
+
+.journey__timeline::before {
+
+    top: 38px !important;
+
+    bottom: 38px !important;
+
+    left: 9px !important;
+
+    width: 1px !important;
+
+    transform: none !important;
+
+  }
+
+}
+
+@media (max-width: 520px) {
+
+.journey__timeline::before {
+
+    top: 34px !important;
+
+    bottom: 34px !important;
+
+  }
+
+}
