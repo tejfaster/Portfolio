@@ -1,0 +1,135 @@
+/* ========================================
+   RESET, PAGE & CINEMATIC BACKGROUND
+   ======================================== */
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+body {
+
+  margin: 0;
+
+  min-width: 320px;
+
+  min-height: 100vh;
+
+  background: var(--background);
+
+}
+
+body,
+
+button,
+
+a {
+
+  font-family: inherit;
+
+}
+
+a {
+
+  color: inherit;
+
+  text-decoration: none;
+
+}
+
+button {
+
+  border: 0;
+
+}
+
+#root {
+
+  min-height: 100vh;
+
+}
+
+.portfolio-page {
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+.cinematic-background {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+}
+
+.cinematic-background__image {
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image: url('/images/journey/hero-bg.png');
+
+  background-repeat: no-repeat;
+
+  background-position: center center;
+
+  background-size: cover;
+
+  transform: scale(1.01);
+
+}
+
+.cinematic-background__overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    linear-gradient(
+
+      90deg,
+
+      rgba(3, 8, 15, 0.94) 0%,
+
+      rgba(3, 8, 15, 0.82) 24%,
+
+      rgba(3, 8, 15, 0.55) 48%,
+
+      rgba(3, 8, 15, 0.28) 72%,
+
+      rgba(3, 8, 15, 0.52) 100%
+
+    ),
+
+    linear-gradient(
+
+      180deg,
+
+      rgba(3, 8, 15, 0.18) 0%,
+
+      rgba(3, 8, 15, 0.04) 45%,
+
+      rgba(3, 8, 15, 0.82) 100%
+
+    );
+
+}
