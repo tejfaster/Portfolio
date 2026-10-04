@@ -1,0 +1,35 @@
+/* ========================================
+   DESIGN TOKENS & FONTS
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+
+  font-family: 'DM Sans', sans-serif;
+
+  color: #f5f7fb;
+
+  background: #050b14;
+
+  --background: #050b14;
+
+  --text: #f5f7fb;
+
+  --muted: #a4afbf;
+
+  --blue: #3787ff;
+
+  --blue-light: #69a8ff;
+
+  --green: #35dca6;
+
+  font-synthesis: none;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+}

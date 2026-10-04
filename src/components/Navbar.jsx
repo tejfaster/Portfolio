@@ -1,30 +1,54 @@
+import { ArrowUpRight } from "lucide-react";
+
 function Navbar() {
   return (
     <header className="navbar">
       <a href="#home" className="navbar__brand" aria-label="Tej Pratap home">
-        <span className="navbar__logo">TP</span>
+        <img
+          src="/images/brand/tp-logo.png"
+          alt="TP"
+          className="navbar__logo"
+        />
 
-        <span className="navbar__identity">
+        <div className="navbar__identity">
           <strong>Tej Pratap</strong>
           <small>Data · AI · Analytics Engineering</small>
-        </span>
+        </div>
       </a>
 
       <nav className="navbar__links" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#journey">Journey</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" className="navbar__link">
+          Home
+        </a>
+
+        <a href="#journey" className="navbar__link">
+          Journey
+        </a>
+
+        <a href="#projects" className="navbar__link">
+          Projects
+        </a>
+
+        <a href="#skills" className="navbar__link">
+          Skills
+        </a>
+
+        <a href="#resume" className="navbar__link">
+          Resume
+        </a>
+
+        <a href="#contact" className="navbar__link">
+          Contact
+        </a>
       </nav>
 
-      <a href="#contact" className="navbar__cta">
-        <span className="navbar__status" />
+      <a href="#contact" className="navbar__opportunity">
+        <span className="navbar__opportunity-dot" />
         <span>Open to Opportunities</span>
+        <ArrowUpRight size={16} strokeWidth={1.8} />
       </a>
     </header>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

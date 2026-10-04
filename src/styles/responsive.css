@@ -1,0 +1,374 @@
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 14px 28px;
+  }
+
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__opportunity {
+    margin-left: auto;
+  }
+
+  .cinematic-background__image {
+    background-image: url("/images/journey/hero-bg-mobile.png");
+    background-position: 58% center;
+  }
+
+  .hero {
+    min-height: 100svh;
+    align-items: flex-end;
+    padding: 130px 38px 105px;
+  }
+
+  .hero__content {
+    width: min(650px, 100%);
+    margin-top: 0;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 14px;
+    font-size: 10px;
+    letter-spacing: 0.19em;
+  }
+
+  .hero__title {
+    font-size: clamp(40px, 8vw, 58px);
+    letter-spacing: -0.055em;
+    line-height: 1;
+  }
+
+  .hero__description {
+    max-width: 600px;
+    margin-top: 19px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .hero__desktop-break {
+    display: none;
+  }
+
+  .hero__primary {
+    margin-top: 23px;
+  }
+
+  .hero__socials {
+    margin-top: 22px;
+  }
+
+  .hero__timeline-marker {
+    bottom: 10px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .journey__stage {
+    min-height: 600px;
+  }
+
+  .journey__intro {
+    top: 10%;
+    width: calc(100% - 36px);
+  }
+
+  .journey__intro h2 {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+
+  .journey__intro p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+  }
+
+  .journey__scroll {
+    margin-top: 21px;
+  }
+
+  .journey__chapter-count {
+    top: 42%;
+  }
+
+  .journey__line {
+    top: 43%;
+    bottom: 8%;
+    left: 50%;
+  }
+
+  .journey-card,
+  .journey-card--left,
+  .journey-card--right {
+    top: 67%;
+    left: 9%;
+    right: auto;
+    width: 82%;
+    padding: 0;
+    text-align: left;
+  }
+
+  .journey-card--left .journey-card__number,
+  .journey-card--right .journey-card__number {
+    left: -22px;
+    right: auto;
+    top: 22px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .journey-card--left .journey-card__content::before,
+  .journey-card--right .journey-card__content::before {
+    left: 0;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .journey-card--left .journey-card__tags,
+  .journey-card--left .journey-card__verified,
+  .journey-card--left .journey-card__actions {
+    justify-content: flex-start;
+  }
+
+  .journey-card__content {
+    padding: 27px 22px 25px;
+    border-radius: 15px;
+  }
+
+  .journey-card h3 {
+    font-size: 25px;
+  }
+
+  .journey-card p {
+    font-size: 12px;
+  }
+
+  .journey__end {
+    min-height: 50vh;
+    padding: 70px 22px 90px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .navbar__logo {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .navbar__identity strong {
+    font-size: 17px;
+  }
+
+  .navbar__identity small {
+    font-size: 10px;
+  }
+
+  .navbar__opportunity {
+    min-height: 36px;
+    gap: 7px;
+    padding: 0 11px;
+    font-size: 9px;
+  }
+
+  .navbar__opportunity-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .cinematic-background__image {
+    background-position: 72% center;
+  }
+
+  .hero {
+    padding-top: 115px;
+    padding-bottom: 95px;
+  }
+
+  .hero__title {
+    font-size: 38px;
+  }
+
+  .hero__description {
+    font-size: 12px;
+  }
+
+  .hero__socials {
+    gap: 12px;
+  }
+
+  .hero__social {
+    font-size: 11px;
+  }
+
+  .journey__intro {
+    top: 9%;
+    width: calc(100% - 28px);
+  }
+
+  .journey__intro h2 {
+    font-size: 40px;
+  }
+
+  .journey__intro p {
+    margin-top: 17px;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .journey__scroll {
+    margin-top: 18px;
+  }
+
+  .journey__chapter-count {
+    top: 41%;
+  }
+
+  .journey__line {
+    top: 42%;
+    bottom: 8%;
+  }
+
+  .journey-card,
+  .journey-card--left,
+  .journey-card--right {
+    top: 66%;
+    left: 8%;
+    width: 84%;
+  }
+
+  .journey-card__content {
+    padding: 23px 19px 21px;
+  }
+
+  .journey-card h3 {
+    font-size: 23px;
+  }
+
+  .journey-card p {
+    font-size: 12px;
+  }
+
+  .journey-card__tags span {
+    font-size: 9px;
+    padding: 0 8px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .navbar__identity {
+    display: none;
+  }
+
+  .navbar__opportunity {
+    font-size: 8px;
+    padding: 0 9px;
+  }
+
+  .navbar__logo {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+  }
+
+  .hero {
+    padding-top: 115px;
+    padding-bottom: 95px;
+  }
+
+  .hero__title {
+    font-size: 38px;
+  }
+
+  .hero__description {
+    font-size: 12px;
+  }
+
+  .hero__socials {
+    gap: 12px;
+  }
+
+  .journey__intro {
+    top: 8%;
+  }
+
+  .journey__intro h2 {
+    font-size: 36px;
+  }
+
+  .journey__intro p {
+    font-size: 11px;
+  }
+
+  .journey__chapter-count {
+    top: 40%;
+  }
+
+  .journey-card {
+    top: 65%;
+  }
+
+  .journey-card__content {
+    padding: 18px;
+  }
+
+  .journey-card h3 {
+    font-size: 19px;
+  }
+
+  .journey-card p {
+    font-size: 11px;
+  }
+
+  .journey-card__tags span {
+    font-size: 9px;
+  }
+
+  .journey-card__number {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
